@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 np.random.seed(0)
 N = 200   # number for input samples
@@ -29,3 +30,9 @@ for epoch in range(epochs):
         print(f"epoch {epoch+1:3d} | loss {loss:.6f} | w {w.item():.3f} | b {b.item():.3f}")
 
 print("Learned:", "w=", w.item(), "b=", float(b))
+
+# graph
+plt.scatter(x,y,label="data")
+plt.plot(x,y_pred,color="red",label="model")
+plt.legend()
+plt.show()
