@@ -3,10 +3,10 @@ import numpy as np
 np.random.seed(0)
 N = 200   # number for input samples
 x = np.linspace(-1, 1, N).reshape(-1, 1)   # converting N to synthetic dataset 
-y = 3*x + 2 + 0.1*np.random.randn(N, 1)   # y = mx + b + noise for random variation
+y = 3*x + 2 + 0.1*np.random.randn(N, 1)   # y = wx + b + noise for random variation
 
-weight = np.random.randn(1, 1)
-bias = np.zeros((1,))
+w = np.random.randn(1, 1) # weight
+b = np.zeros((1,))   # bias
 
 lr = 0.1
 epochs = 200 # set by LLM dev as how many iterations we'd like to train the NN
